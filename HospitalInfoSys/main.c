@@ -11,8 +11,9 @@ void printFlow()
 	printf("2.查询所有挂号\n");
 	printf("3.根据收银排序\n");
 	printf("4.收银汇总\n");
+	printf("5.修改记录\n");
 	printf("10.清屏\n");
-	printf("-1.退出系统\n");
+	printf("-1.退出系统，并保存\n");
 	printf("--------------------------------------------------\n");
 }
 
@@ -34,13 +35,18 @@ int main()
 		{
 		case 1:
 			getInput(&pnow);
-			printFlow();
 			break;
 		case 2:
 			showData(head);
 			break;
 		case 3:
 			BubbleSort(head);
+			break;
+		case 4:
+			moneySum(head);
+			break;
+		case 5:
+			update(head);
 			break;
 		case 10:
 			printFlow();
